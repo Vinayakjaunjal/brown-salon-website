@@ -2,10 +2,12 @@ services:
   - type: web
     name: brownsaloon
     env: python
-    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput"
+    buildCommand: "pip install -r requirements.txt"
     startCommand: "gunicorn barbar.wsgi:application"
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: barbar.settings
+      - key: PYTHONPATH
+        value: .
       - key: PYTHON_VERSION
         value: 3.13.4

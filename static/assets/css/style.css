@@ -384,11 +384,11 @@ body {
   background-color: var(--rich-black-fogra-39);
   max-height: 0;
   overflow: hidden;
-  transition: 0.15s var(--cubic-out);
+  transition: max-height 0.3s ease;
 }
 
 .navbar.active {
-  max-height: 321px;
+  max-height: 500px;
   transition-duration: 0.5s;
 }
 
@@ -1558,29 +1558,31 @@ body {
   max-width: 100%;
   overflow-x: hidden; /* Horizontal scroll disable */
 }
-
+/*
 * {
   box-sizing: border-box;
-  max-width: 100%; /* Sab elements screen ke andar */
+  max-width: 100%; 
 }
+  */
 
 img,
 video {
   max-width: 100%;
   height: auto;
-  display: block; /* Images resize ho jayengi */
+  display: block;
 }
-
+/*
 .container,
 .grid-list,
 .pricing-card,
 .gallery-card {
   width: 100%;
   flex-wrap: wrap;
-  grid-template-columns: 1fr; /* Mobile par ek line me stack */
+  grid-template-columns: 1fr; 
 }
 
 section,
 div {
-  overflow-x: hidden; /* Koi element bahar nikle to cut ho jaye */
+  overflow-x: hidden; 
 }
+*/

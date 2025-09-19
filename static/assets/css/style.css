@@ -1,12 +1,4 @@
 /*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2023 gaurav tripathi
- */
-
-/*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
 
@@ -1559,3 +1551,36 @@ a.contact-link:is(:hover, :focus) {
 }
 
 /*REVIEW SECTION*/
+
+/* Universal Mobile Fix */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden; /* Horizontal scroll disable */
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%; /* Sab elements screen ke andar */
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Images resize ho jayengi */
+}
+
+.container,
+.grid-list,
+.pricing-card,
+.gallery-card {
+  width: 100%;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr; /* Mobile par ek line me stack */
+}
+
+section,
+div {
+  overflow-x: hidden; /* Koi element bahar nikle to cut ho jaye */
+}

@@ -829,7 +829,7 @@ textarea.input-field {
 }
 
 .footer-link::before {
-  position: brown-saloon-website/static;
+  position: static;
   padding: 2.5px;
   background-color: var(--white_30);
   display: block;

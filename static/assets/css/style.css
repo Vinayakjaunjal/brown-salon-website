@@ -316,7 +316,7 @@ body {
   transition: var(--transition-1);
 }
 
-.header-top-list .social-link:is(:hover, :focus) {
+.header-top-list :is(:hover, :focus) {
   color: var(--indian-yellow);
 }
 
@@ -920,13 +920,9 @@ a.contact-link:is(:hover, :focus) {
   color: var(--indian-yellow);
 }
 
-/*-----------------------------------*\
-  #MEDIA QUERIES
-\*-----------------------------------*/
+/* MEDIA QUERIES */
 
-/**
- * responsive for large than 575px screen
- */
+/* responsive for large than 575px screen */
 
 @media (min-width: 575px) {
   /**
@@ -1012,10 +1008,7 @@ a.contact-link:is(:hover, :focus) {
     font-size: 1.4rem;
   }
 
-  /**
-   * HERO
-   */
-
+  /* HERO */
   .hero {
     padding-block-start: calc(var(--section-padding) + 80px);
   }
@@ -1024,10 +1017,7 @@ a.contact-link:is(:hover, :focus) {
     font-size: var(--fs-18);
   }
 
-  /**
-   * PRICING
-   */
-
+  /* PRICING */
   .filter-btn .btn-icon {
     display: block;
     font-size: 55px;
@@ -1050,25 +1040,19 @@ a.contact-link:is(:hover, :focus) {
     line-height: 1.6;
   }
 
-  /**
-   * GALLERY
-   */
+  /* GALLERY */
 
   .gallery .grid-list {
     grid-template-columns: 1fr 1fr;
   }
 
-  /**
-   * APPOINTMENT
-   */
+  /* APPOINTMENT */
 
   .appoin-card .card-content {
     padding-inline: 50px;
   }
 
-  /**
-   * FOOTER
-   */
+  /* FOOTER */
 
   .footer .email-field {
     margin-block-end: 0;
@@ -1100,26 +1084,18 @@ a.contact-link:is(:hover, :focus) {
   }
 }
 
-/**
- * responsive for large than 768px screen
- */
+/* responsive for large than 768px screen */
 
 @media (min-width: 768px) {
-  /**
-   * CUSTOM PROPERTY
-   */
+  /* CUSTOM PROPERTY */
 
   :root {
-    /**
-     * typography
-     */
+    /* typography */
 
     --fs-40: 8rem;
   }
 
-  /**
-   * REUSED STYLE
-   */
+  /* REUSED STYLE */
 
   .container {
     max-width: 720px;
@@ -1134,25 +1110,19 @@ a.contact-link:is(:hover, :focus) {
     margin-inline: auto;
   }
 
-  /**
-   * HEADER
-   */
+  /* HEADER */
 
   .header-top {
     max-width: 780px;
   }
 
-  /**
-   * SERVICE
-   */
+  /* SERVICE */
 
   .service .grid-list {
     grid-template-columns: 1fr 1fr;
   }
 
-  /**
-   * PRICING
-   */
+  /* PRICING */
 
   .pricing-tab-container {
     padding: 40px;
@@ -1162,9 +1132,7 @@ a.contact-link:is(:hover, :focus) {
     margin-inline-end: auto;
   }
 
-  /**
-   * GALLERY
-   */
+  /* GALLERY */
 
   .gallery .section-text {
     margin-inline: 0;
@@ -1174,9 +1142,7 @@ a.contact-link:is(:hover, :focus) {
     inset: 30px;
   }
 
-  /**
-   * APPOINTMENT
-   */
+  /* APPOINTMENT */
 
   .appoin-card .card-banner {
     display: block;
@@ -1186,43 +1152,55 @@ a.contact-link:is(:hover, :focus) {
     display: flex;
   }
 
-  /**
-   * FOOTER
-   */
+  /* FOOTER */
 
   .footer-list:is(:nth-child(3), :nth-child(4)) {
     grid-column: auto;
   }
 }
 
-/**
- * responsive for large than 992px screen
- */
+/* Mobile view adjust */
+@media (max-width: 768px) {
+  .header-top-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+
+  .header-top-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .header-top-item ion-icon {
+    font-size: 14px;
+  }
+}
+
+/* responsive for large than 992px screen */
 
 @media (min-width: 992px) {
-  /**
-   * CUSTOM PROPERTY
-   */
+  /* CUSTOM PROPERTY */
 
   :root {
-    /**
-     * typography
-     */
+    /* typography */
 
     --fs-40: 10rem;
   }
 
-  /**
-   * REUSED STYLE
-   */
+  /* REUSED STYLE */
 
   .container {
     max-width: 960px;
   }
 
-  /**
-   * HEADER
-   */
+  /* HEADER */
 
   .nav-toggle-btn {
     display: none;
@@ -1251,9 +1229,7 @@ a.contact-link:is(:hover, :focus) {
     padding-inline: 10px;
   }
 
-  /**
-   * HERO
-   */
+  /* HERO */
 
   .hero {
     --section-padding: 150px;
@@ -1265,17 +1241,13 @@ a.contact-link:is(:hover, :focus) {
     max-width: 600px;
   }
 
-  /**
-   * SERVICE
-   */
+  /* SERVICE */
 
   .service .grid-list {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /**
-   * PRICING
-   */
+  /* PRICING */
 
   .pricing .grid-list {
     grid-template-columns: 1fr 1fr;
@@ -1289,9 +1261,7 @@ a.contact-link:is(:hover, :focus) {
     flex-shrink: 0;
   }
 
-  /**
-   * GALLERY
-   */
+  /* GALLERY */
 
   .gallery .title-wrapper {
     display: flex;
@@ -1303,18 +1273,14 @@ a.contact-link:is(:hover, :focus) {
     margin-block-end: 0;
   }
 
-  /**
-   * APPOINTMENT
-   */
+  /* APPOINTMENT */
 
   .appoin-card .input-wrapper {
     display: flex;
     gap: 20px;
   }
 
-  /**
-   * FOOTER
-   */
+  /* FOOTER */
 
   .footer-brand {
     display: flex;
@@ -1333,40 +1299,28 @@ a.contact-link:is(:hover, :focus) {
   }
 }
 
-/**
- * responsive for large than 1200px screen
- */
+/* responsive for large than 1200px screen */
 
 @media (min-width: 1200px) {
-  /**
-   * CUSTOM PROPERTY
-   */
+  /* CUSTOM PROPERTY */
 
   :root {
-    /**
-     * typography
-     */
+    /* typography */
 
     --fs-40: 11rem;
 
-    /**
-     * spacing
-     */
+    /* spacing */
 
     --section-padding: 120px;
   }
 
-  /**
-   * REUSED STYLE
-   */
+  /* REUSED STYLE */
 
   .container {
     max-width: 1200px;
   }
 
-  /**
-   * HEADER
-   */
+  /* HEADER */
 
   .header-top {
     max-width: 1260px;
@@ -1386,9 +1340,7 @@ a.contact-link:is(:hover, :focus) {
     margin-inline-end: auto;
   }
 
-  /**
-   * HERO
-   */
+  /* HERO */
 
   .hero {
     background-position: left;
@@ -1400,41 +1352,31 @@ a.contact-link:is(:hover, :focus) {
     max-width: 680px;
   }
 
-  /**
-   * PRICING
-   */
+  /* PRICING */
 
   .filter-btn {
     min-width: 178px;
   }
 
-  /**
-   * GALLERY
-   */
+  /* GALLERY */
 
   .gallery .grid-list {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  /**
-   * APPOINTMENT
-   */
+  /* APPOINTMENT */
 
   .appoin-card .card-content {
     flex-grow: 1;
   }
 
-  /**
-   * FOOTER
-   */
+  /* FOOTER */
 
   .footer-link-box {
     grid-template-columns: 0.5fr 0.5fr 1fr 0.8fr;
   }
 
-  /**
-   * BACK TO TOP
-   */
+  /* BACK TO TOP */
 
   .back-top-btn {
     padding: 15px;
@@ -1443,8 +1385,8 @@ a.contact-link:is(:hover, :focus) {
 
 .card-bottom {
   display: flex;
-  justify-content: space-between; /* price left, button right */
-  align-items: center; /* dono ek hi line me */
+  justify-content: space-between;
+  align-items: center;
   margin-top: 10px;
 }
 
@@ -1480,6 +1422,7 @@ a.contact-link:is(:hover, :focus) {
 }
 
 /* about us  */
+
 .about-section {
   padding: 60px 20px;
   text-align: center;
@@ -1550,20 +1493,12 @@ a.contact-link:is(:hover, :focus) {
   display: block;
 }
 
-/*REVIEW SECTION*/
-
 /* Universal Mobile Fix */
 html,
 body {
   max-width: 100%;
   overflow-x: hidden; /* Horizontal scroll disable */
 }
-/*
-* {
-  box-sizing: border-box;
-  max-width: 100%; 
-}
-  */
 
 img,
 video {
@@ -1571,18 +1506,25 @@ video {
   height: auto;
   display: block;
 }
-/*
-.container,
-.grid-list,
-.pricing-card,
-.gallery-card {
-  width: 100%;
-  flex-wrap: wrap;
-  grid-template-columns: 1fr; 
+
+/* Map container */
+.map-wrapper {
+  width: 100%; /* container ke andar fit ho */
+  max-width: 100%;
+  height: 250px; /* desktop ke liye height */
+  overflow: hidden;
 }
 
-section,
-div {
-  overflow-x: hidden; 
+.map-wrapper iframe {
+  width: 100%; /* container ke andar stretch ho */
+  height: 100%; /* container ki height follow kare */
+  border: 0;
 }
-*/
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .map-wrapper {
+    height: 200px; /* mobile me height thoda kam */
+    width: 100%;
+  }
+}
